@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iniciar Sesión</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+    <section id="login">
+
+        <div class="contenedor-login">
+
+            <h1>Iniciar Sesión</h1>
+
+            <form method="POST">
+
+                <input 
+                    type="text" 
+                    name="usuario" 
+                    placeholder="Usuario"
+                    required
+                >
+
+                <input 
+                    type="password" 
+                    name="password" 
+                    placeholder="Contraseña"
+                    required
+                >
+
+                <button type="submit">
+                    Validar
+                </button>
+
+            </form>
+
+            <p class="mensaje">
+                {{ mensaje }}
+            </p>
+
+            <p class="restantes">
+                Intentos restantes: {{ restantes }}
+            </p>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

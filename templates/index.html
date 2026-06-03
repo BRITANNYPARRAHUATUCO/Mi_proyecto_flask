@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodega July</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="preloader">
+    <div class="preloader-contenido">
+        <img src="{{ url_for('static', filename='img/Caja.png') }}" class="caja-rebotando" alt="Cargando...">
+        <div class="sombra-caja"></div>
+        <p class="texto-carga">Cargando tu hogar<span>.</span><span>.</span><span>.</span></p>
+    </div>
+</div>
+
+    <nav>
+        <div class="logo">
+            <h1>Bodega July</h1>
+        </div>
+
+        <div class="buscador">
+            <input type="text" placeholder="Buscar productos">
+        </div>
+
+        <ul>
+            <li><a href="#" class="active">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Promociones</a></li>
+            <li>
+                <a href="/login" class="btn-login">Iniciar Sesión</a>
+            </li>
+            <li class="carrito-contenedor">
+    <button class="btn-carrito"><i class="fas fa-shopping-cart"></i></button>
+    <span class="carrito-badge">2</span>
+</li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <button class="slider-arrow prev">&lsaquo;</button>
+
+        <div class="hero-contenido">
+            <span class="hero-tag">Todo lo que necesitas</span>
+            <h1>
+                Todo para tu hogar,<br>
+                <span>en un solo lugar</span>
+            </h1>
+            <p>Compra rápido, fácil y sin salir de casa.</p>
+            <button class="btn-principal">Comprar ahora &rsaquo;</button>
+        </div>
+
+        <div class="hero-imagen">
+            <img src="{{ url_for('static', filename='img/Loader.png') }}" alt="Productos">
+        </div>
+
+        <button class="slider-arrow next">&rsaquo;</button>
+
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+<section id="marcas">
+    <h2>Marcas que confían en nosotros</h2>
+    <div class="marcas-wrapper">
+        <div class="marcas-slider" id="slider">
+            <img src="{{ url_for('static', filename='img/Coca-Cola.png') }}" alt="Coca Cola">
+            <img src="{{ url_for('static', filename='img/Gloria.png') }}" alt="Gloria">
+            <img src="{{ url_for('static', filename='img/Alicorp.png') }}" alt="Alicorp">
+            <img src="{{ url_for('static', filename='img/Laive.png') }}" alt="Laive">
+            <img src="{{ url_for('static', filename='img/Bimbo.png') }}" alt="Bimbo">
+            <img src="{{ url_for('static', filename='img/Field.png') }}" alt="Field">
+            <img src="{{ url_for('static', filename='img/Costeño.png') }}" alt="Costeño">
+            <img src="{{ url_for('static', filename='img/Elite.png') }}" alt="Elite">
+        </div>
+    </div>
+    <p class="marcas-sub">Trabajamos con las mejores marcas para ti</p>
+</section>
+
+    <section id="categorias">
+        <h2>Categorías</h2>
+
+        <div class="categorias-container">
+            <div class="categoria-card">
+                <span class="cat-icon icon-food"></span>
+                <div class="cat-info">
+                    <h3>Alimentos</h3>
+                    <a href="#">Ver más &rsaquo;</a>
+                </div>
+            </div>
+
+            <div class="categoria-card">
+                <span class="cat-icon icon-clean"></span>
+                <div class="cat-info">
+                    <h3>Limpieza</h3>
+                    <a href="#">Ver más &rsaquo;</a>
+                </div>
+            </div>
+
+            <div class="categoria-card">
+                <span class="cat-icon icon-drink"></span>
+                <div class="cat-info">
+                    <h3>Bebidas</h3>
+                    <a href="#">Ver más &rsaquo;</a>
+                </div>
+            </div>
+
+            <div class="categoria-card">
+                <span class="cat-icon icon-personal"></span>
+                <div class="cat-info">
+                    <h3>Cuidado personal</h3>
+                    <a href="#">Ver más &rsaquo;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="productos">
+        <div class="productos-header">
+            <h2>Productos Destacados</h2>
+            <a href="#" class="ver-todos">Ver todos &rarr;</a>
+        </div>
+
+        <div class="productos-container">
+            <div class="card">
+                <button class="btn-favorito"><i class="icon-heart"></i></button>
+                <img src="{{ url_for('static', filename='img/Gaseosa.jpg') }}" alt="Gaseosa">
+                <div class="card-info">
+                    <h3>Gaseosas</h3>
+                    <div class="card-footer">
+                        <span class="precio">S/ 7.50</span>
+                        <button class="btn-agregar">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <button class="btn-favorito"><i class="icon-heart"></i></button>
+                <img src="{{ url_for('static', filename='img/Snacks.jpg') }}" alt="Snacks">
+                <div class="card-info">
+                    <h3>Papas Lays</h3>
+                    <div class="card-footer">
+                        <span class="precio">S/ 4.50</span>
+                        <button class="btn-agregar">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <button class="btn-favorito"><i class="icon-heart"></i></button>
+                <img src="{{ url_for('static', filename='img/Abarrotes.jpeg') }}" alt="Abarrotes">
+                <div class="card-info">
+                    <h3>Abarrotes</h3>
+                    <div class="card-footer">
+                        <span class="precio">S/ 4.20</span>
+                        <button class="btn-agregar">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Bodega July - Todos los derechos reservados</p>
+    </footer>
+</body>
+<script src="{{ url_for('static', filename='js/script.js') }}?v=2.0"></script>
+</html>
